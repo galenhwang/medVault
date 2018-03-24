@@ -12,12 +12,15 @@ import {
   View
 } from 'react-native';
 
+import { Provider as PaperProvider } from 'react-native-paper';
 import RootStack from './src/RootStack';
 
 export default class App extends Component {
   render() {
     return (
-      <RootStack />
+      <PaperProvider>
+        <RootStack />
+      </PaperProvider>
     );
   }
 }
