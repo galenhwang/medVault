@@ -24,7 +24,8 @@ class LoginScreen extends Component {
     return (
       <View style={{
         flex: 1,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        margin: 20
       }}>
         <TextInput
           label='Email'

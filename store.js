@@ -16,9 +16,15 @@ export const AppReducer = (state = {}, action) => {
     case 'LOGIN_USER_SUCCESS':
       console.log('reducer hit')
         return {
-        ...state,
-        token: action.token
-       };
+          ...state,
+          token: action.token
+        };
+    case 'SIGNUP_USER_SUCCESS':
+      console.log('reducer hit')
+        return {
+          ...state,
+          token: action.token
+        };
     default:
       return state;
     }

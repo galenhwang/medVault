@@ -11,14 +11,22 @@ class SignUpScreen extends Component {
   }
 
   _handleSubmit() {
-    api.post('/user/signup', {user: state})
+    api.post('/user/signup', {user: this.state})
+    .then(res => {
+      this.props.dispatch({
+        type: 'SIGNUP_USER_SUCCESS',
+        token: res.data.token
+      })
+    })
+    .catch(err => console.log(err))
   }
 
   render() {
     return (
       <View style={{
         flex: 1,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        margin: 20
       }}>
         <Text>Let&#39;s sign up!</Text>
         <TextInput
