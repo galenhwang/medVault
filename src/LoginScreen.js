@@ -22,7 +22,11 @@ class LoginScreen extends Component {
 
   render() {
     return (
-      <View>
+      <View style={{
+        flex: 1,
+        justifyContent: 'center',
+        margin: 20
+      }}>
         <TextInput
           label='Email'
           value={this.state.email}
