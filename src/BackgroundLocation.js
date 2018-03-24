@@ -19,7 +19,7 @@ class BackgroundLocation extends Component {
       notificationTitle: 'Background tracking',
       notificationText: 'enabled',
       debug: true,
-      startOnBoot: false,
+      startOnBoot: true,
       stopOnTerminate: false,
       locationProvider: BackgroundGeolocation.ACTIVITY_PROVIDER,
       interval: 10000,

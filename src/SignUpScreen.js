@@ -11,8 +11,9 @@ class SignUpScreen extends Component {
   }
 
   _handleSubmit() {
-    api.post('/user/signup', {user: this.state})
+    api.post('/users/signup', {user: this.state})
     .then(res => {
+      console.log(res.data)
       this.props.dispatch({
         type: 'SIGNUP_USER_SUCCESS',
         token: res.data.token
