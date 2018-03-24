@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-
+import { View, Text, AsyncStorage } from 'react-native';
+import { connect } from 'react-redux';
 import { TextInput, Button } from 'react-native-paper';
 import api from '../lib/api';
 
@@ -10,8 +10,14 @@ class LoginScreen extends Component {
     password: '',
   }
 
+  componentDidMount() {
+
+  }
+
   _handleSubmit() {
-    api.post('/user/login', {user: state})
+    api.post('/users/login', {user: this.state}).then(res => {
+      this.props.dispatch({type: 'LOGIN_USER_SUCCESS', token: res.data.token})
+    }).catch(err => console.log(err))
   }
 
   render() {
@@ -30,9 +36,12 @@ class LoginScreen extends Component {
         <Button raised onPress={() => this._handleSubmit()}>
           Login
         </Button>
+        <Text>{this.props.token}</Text>
     </View>
     )
   }
 }
 
-export default LoginScreen;
+export default connect(state => {
+  return { token: state.token }
+})(LoginScreen);
