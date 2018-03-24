@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Alert } from 'react-native';
 import BackgroundGeolocation from 'react-native-mauron85-background-geolocation';
 import { Text, StyleSheet, View } from 'react-native';
+import api from '../lib/api';
 
 class BackgroundLocation extends Component {
   state = {
@@ -31,6 +32,12 @@ class BackgroundLocation extends Component {
       console.log(location)
 
       const { longitude, latitude, speed } = location;
+      api.put('/users/location', {latitude: latitude, longitude: longitude}).then(res => {
+        console.log(res)
+      }).catch(err => {
+        console.log(err)
+      })
+
       this.setState({
         longitude: longitude, 
         latitude: latitude, 
