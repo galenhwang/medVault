@@ -12,7 +12,7 @@ import {
   View
 } from 'react-native';
 
-import RootStack from './RootStack';
+import RootStack from './src/RootStack';
 
 export default class App extends Component {
   render() {
