@@ -37,7 +37,7 @@ export default class HomeScreen extends Component {
           Height (inches): 63
         </Text>
         <Text style={styles.fields}>
-          Weight: 110
+          Weight (pounds): 110
         </Text>
       </ScrollView>
     );
