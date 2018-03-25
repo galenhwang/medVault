@@ -17,6 +17,7 @@ class LoginScreen extends Component {
   _handleSubmit() {
     api.post('/users/login', {user: this.state}).then(res => {
       this.props.dispatch({type: 'LOGIN_USER_SUCCESS', token: res.data.token})
+      this.props.navigation.navigate("Home")
     }).catch(err => console.log(err))
   }
 

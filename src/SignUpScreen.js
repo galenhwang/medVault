@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-
+import { connect } from 'react-redux';
 import { TextInput, Button } from 'react-native-paper';
 import api from '../lib/api';
 
@@ -48,4 +48,4 @@ class SignUpScreen extends Component {
   }
 }
 
-export default SignUpScreen;
+export default connect()(SignUpScreen);

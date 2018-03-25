@@ -2,15 +2,23 @@ import BackgroundLocation from './BackgroundLocation';
 import HomeScreen from './HomeScreen';
 import LoginScreen from './LoginScreen';
 import SignUpScreen from './SignUpScreen';
-import { TabNavigator } from 'react-navigation';
+import Logout from './Logout';
+import Main from '../Main';
+import { StackNavigator } from 'react-navigation';
 
-export default RootStack = TabNavigator({
-  Home: {
-    screen: HomeScreen,
+export default RootStack = StackNavigator({
+  Login: {
+    screen: LoginScreen,
   },
-  Background: {
-    screen: BackgroundLocation,
-  }
+  Logout: {
+    screen: Logout,
+  },
+  Signup: {
+    screen: SignUpScreen,
+  },
+  Home: {
+    screen: Main,
+  },
 },{
 
 });
