@@ -1,26 +1,45 @@
 
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  ScrollView
 } from 'react-native';
 
 export default class HomeScreen extends Component {
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
+      <ScrollView contentContainerStyle={styles.container}>
+        <Text style={styles.title}>
+          Your Medical Information:
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit App.js
+        <Text style={styles.fields}>
+          Name: Jane Doe
         </Text>
-        <Text style={styles.instructions}>
-
+        <Text style={styles.fields}>
+          Age: 28
         </Text>
-      </View>
+        <Text style={styles.fields}>
+          Allergies: Dairy, Egg, Peanut
+        </Text>
+        <Text style={styles.fields}>
+          Prescriptions: Lisinopril, Simvastatin
+        </Text>
+        <Text style={styles.fields}>
+          History: Asthma, Heart disease
+        </Text>
+        <Text style={styles.fields}>
+          Medical Record Number: 2940915
+        </Text>
+        <Text style={styles.fields}>
+          Height (inches): 63
+        </Text>
+        <Text style={styles.fields}>
+          Weight (pounds): 110
+        </Text>
+      </ScrollView>
     );
   }
 }
@@ -28,18 +47,18 @@ export default class HomeScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    margin: 30,
   },
-  welcome: {
+  title: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    textAlignVertical: 'top',
+  },
+  fields: {
     fontSize: 20,
-    textAlign: 'center',
+    textAlign: 'left',
     margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
   },
 });
