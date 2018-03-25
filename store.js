@@ -25,6 +25,12 @@ export const AppReducer = (state = {}, action) => {
           ...state,
           token: action.token
         };
+    case 'LOGOUT_USER':
+      console.log('reducer hit')
+        return {
+          ...state,
+          token: null
+        };
     default:
       return state;
     }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import {
   Platform,
   StyleSheet,
@@ -6,9 +7,10 @@ import {
   View
 } from 'react-native';
 
-export default class Logout extends Component {
+class Logout extends Component {
 
   componentDidMount() {
+    this.props.dispatch({type: 'LOGOUT_USER'})
     this.props.navigation.navigate("Login")
   }
   render() {
@@ -18,6 +20,7 @@ export default class Logout extends Component {
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -37,3 +40,5 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
 });
+
+export default connect()(Logout);
