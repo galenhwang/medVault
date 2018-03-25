@@ -4,7 +4,13 @@ import { View, StyleSheet } from 'react-native';
 
 class FormScreen extends React.Component {
   state = {
-    text: ''
+    age: '',
+    allergies: '',
+    prescription: '',
+    history: '',
+    number: '',
+    height: '',
+    weight: '',
   };
 
   render(){
@@ -12,36 +18,49 @@ class FormScreen extends React.Component {
       <View style={styles.container}>
         <TextInput
           style={{width: '60%'}}
-          label='Email'
-          value={this.state.text}
+          label='Age'
+          value={this.state.age}
           onChangeText={text => this.setState({ text })}
         />
 
         <TextInput
           style={{width: '60%'}}
-          label='Email'
-          value={this.state.text}
+          label='Allergies'
+          value={this.state.allergies}
           onChangeText={text => this.setState({ text })}
         />
 
         <TextInput
           style={{width: '60%'}}
-          label='Email'
-          value={this.state.text}
+          label='Prescription'
+          value={this.state.prescription}
           onChangeText={text => this.setState({ text })}
         />
 
         <TextInput
           style={{width: '60%'}}
-          label='Email'
-          value={this.state.text}
+          label='History'
+          value={this.state.history}
           onChangeText={text => this.setState({ text })}
         />
 
         <TextInput
           style={{width: '60%'}}
-          label='Email'
-          value={this.state.text}
+          label='Medical Record Number'
+          value={this.state.number}
+          onChangeText={text => this.setState({ text })}
+        />
+
+        <TextInput
+          style={{width: '60%'}}
+          label='Height'
+          value={this.state.height}
+          onChangeText={text => this.setState({ text })}
+        />
+        <TextInput
+          style={{width: '60%'}}
+          label='Weight'
+          value={this.state.weight}
           onChangeText={text => this.setState({ text })}
         />
       </View>
