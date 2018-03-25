@@ -37,6 +37,7 @@ class SignUpScreen extends Component {
           onChangeText={email => this.setState({ email })}
         />
         <TextInput
+          password={true}
           label='Password'
           value={this.state.password}
           onChangeText={password => this.setState({ password })}

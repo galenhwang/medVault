@@ -34,6 +34,7 @@ class LoginScreen extends Component {
           onChangeText={email => this.setState({ email })}
         />
         <TextInput
+          password={true}
           label='Password'
           value={this.state.password}
           onChangeText={password => this.setState({ password })}
@@ -45,7 +46,6 @@ class LoginScreen extends Component {
           title="or Sign Up"
           onPress={() => this.props.navigation.navigate("Signup") }>
         </Button>
-        <Text>{this.props.token}</Text>
     </View>
     )
   }
