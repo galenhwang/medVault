@@ -157,7 +157,7 @@ export default class HomeScreen extends Component {
         </ScrollView>
       )
     } else {
-      return <View><Text>No Data</Text></View>
+      return <View style={styles.container}><Text>No Data</Text></View>
     }
   }
 }
@@ -166,7 +166,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
+    alignItems: 'center',
     margin: 30,
   },
   title: {
