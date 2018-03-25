@@ -18,6 +18,7 @@ class SignUpScreen extends Component {
         type: 'SIGNUP_USER_SUCCESS',
         token: res.data.token
       })
+      this.props.navigation.navigate("Home")
     })
     .catch(err => console.log(err))
   }
