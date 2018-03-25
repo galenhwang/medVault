@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, AsyncStorage } from 'react-native';
+import { View, Text, AsyncStorage, Button} from 'react-native';
 import { connect } from 'react-redux';
-import { TextInput, Button } from 'react-native-paper';
+import { TextInput, Button as B } from 'react-native-paper';
 import api from '../lib/api';
 
 class LoginScreen extends Component {
@@ -37,8 +37,12 @@ class LoginScreen extends Component {
           value={this.state.password}
           onChangeText={password => this.setState({ password })}
         />
-        <Button raised onPress={() => this._handleSubmit()}>
+        <B raised onPress={() => this._handleSubmit()}>
           Login
+        </B>
+        <Button 
+          title="or Sign Up"
+          onPress={() => this.props.navigation.navigate("Signup") }>
         </Button>
         <Text>{this.props.token}</Text>
     </View>
