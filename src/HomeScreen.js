@@ -170,14 +170,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     margin: 30,
   },
-  title: {
-    fontSize: 30,
-    fontWeight: 'bold',
-    textAlignVertical: 'top',
-  },
-  fields: {
-    fontSize: 20,
-    textAlign: 'left',
-    margin: 10,
-  },
 });
